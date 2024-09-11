@@ -1,5 +1,13 @@
 version: "3.1"
 
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: false
+
+# data:
+#   stories:
+#     - data\stories\stories.yml
+
 intents:
   - greet
   - goodbye
@@ -8,6 +16,26 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  # - select_one
+  # - select_one_1
+
+# entities:
+#   - eone
+#   - etwo
+
+# slots:
+
+#   one:
+#     type: text
+#     mappings:
+#     - type: from_entity
+#       entity: eone
+
+#   two:
+#     type: list
+#     mappings:
+#     - type: from_entity
+#       entity: etwo
 
 actions:
   - action_hello_world
@@ -27,10 +55,28 @@ responses:
   - text: "Great, carry on!"
 
   utter_goodbye:
-  - text: "Bye"
+  - text: "Bye! Feel free to comeback if you would like to know more about"
 
   utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+  - text: "I am a bot, created by Muhammed Shah!"
+
+
+  # utter_one:
+  # - text: ""
+  #   buttons:
+  #   - title: One
+  #     payload: "/select_one{{\"eone\":\"One\"}}"
+
+  # utter_sub_one:
+  # - text: ""
+  #   buttons:
+  #   - title: SubOne
+  #     payload: "/select_sub_one{{\"eSubOne\":\"SubOne\"}}"
+  #   condition:
+  #     - type: slot
+  #       name: parent select_
+  #       value: which value of parent select_ when selected should be shown here
+
 
 session_config:
   session_expiration_time: 60
