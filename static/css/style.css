@@ -17,6 +17,7 @@
   border-radius: 10px 10px 10px 10px;
   box-shadow: 0 0px 1px 0 rgba(0, 0, 0, 0.514), 0 0px 10px 0 #00000096;
   background-image: url('../img/widget-bg.png');
+  z-index: 999;
 }
 
 .chat_header {
@@ -81,10 +82,11 @@ div.chats::-webkit-scrollbar {
   font-size: 13px;
   word-wrap: break-word;
   border-radius: 0px 5px 5px 5px;
+  font-family: "Open Sans", sans-serif;
 }
 
 div.chats > pre {
-  font-family: monospace, monospace;
+  font-family: "Open Sans", sans-serif;
   font-size: 1em;
   margin: 0 !important;
   /* display: inline !important; */
@@ -105,11 +107,11 @@ textarea {
   resize: none;
   outline: none;
   overflow: hidden;
-  font-family: Lato;
+  font-family: "Open Sans", sans-serif;
 }
 
 textarea::-webkit-input-placeholder {
-  font-family: Lato;
+  font-family: "Open Sans", sans-serif;
 }
 
 textarea-webkit-scrollbar {
@@ -119,7 +121,7 @@ textarea-webkit-scrollbar {
 .userMsg {
   animation: animateElement linear 0.2s;
   animation-iteration-count: 1;
-  margin-top: 0px;
+  margin-top: 5px;
   word-wrap: break-word;
   padding: 10px;
   float: right;
@@ -131,6 +133,7 @@ textarea-webkit-scrollbar {
   max-width: 65%;
   min-width: 15%;
   border-radius: 5px 0px 5px 5px;
+  font-family: "Open Sans", sans-serif;
   /* box-shadow: 0px 2px 5px 0px #9a828454; */
 }
 
@@ -526,6 +529,7 @@ body {
   font-family: 'Helvetica', sans-serif;
   color: white;
   overflow-x: hidden;
+  background-color: #000000;
 }
 
 .container {
@@ -768,6 +772,7 @@ body {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+  overflow-y: hidden;
 }
 
 .modal-content {
@@ -788,17 +793,19 @@ body {
   cursor: pointer;
 }
 
-h3 {
+.modal-content h3 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 15px; /* Add space after headers */
+  color: #4d6061
+}
+.modal-content h4 {
   font-size: 1.4rem;
   margin-bottom: 15px; /* Add space after headers */
   color: #4d6061
 }
-h4 {
-  margin-bottom: 15px; /* Add space after headers */
-  color: #4d6061
-}
 
-p {
+.modal-content p {
   margin-bottom: 20px; /* Add space between paragraphs */
   word-wrap: break-word;
 }
@@ -861,6 +868,7 @@ p {
   perspective: 1000px;
   position: relative;
   flex-shrink: 0; /* Prevent cards from shrinking */
+  border-radius: 20px;
 }
 
 .card-front, .card-back {
@@ -868,7 +876,7 @@ p {
   height: 100%;
   position: absolute;
   backface-visibility: hidden;
-  border-radius: 15px;
+  border-radius: 25px;
   display: flex;
   align-items: center;
   justify-content: center;

@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const typedTextSpan = document.querySelector(".typed-text");
     const cursorSpan = document.querySelector(".cursor");
 
-    const textArray = ["Hey there.     ", "Welcome to my website!   ", "Feel free to scroll down :)     "];
+    const textArray = ["Hey there!     ", "Feel free to scroll down or just chat :)     "];
     const typingDelay = 100;
     const erasingDelay = 120;
     const newTextDelay = 0; 
