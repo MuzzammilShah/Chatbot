@@ -16,6 +16,9 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - ask_about_me
+  - ask_resume
+  - ask_contact
   # - select_one
   # - select_one_1
 
@@ -61,6 +64,20 @@ responses:
   - text: "I am a bot, created by Muhammed Shah!"
 
 
+  utter_about_me:
+  - text: "Ofcourse! I am Muhammed Shah. I am a detail-oriented AI Engineer with a passion for... well, AI. And my work focuses on bring the practical applications of AI to life!"
+
+  utter_contact:
+  - text: "Sure, Let's [connect on LinkedIn](https://www.linkedin.com/in/muhammed-shah/)!"
+ 
+  utter_resume:
+  - text: ""
+    custom:
+      payload: pdf_attachment
+      title: "My Resume"
+      url: "https://drive.google.com/file/d/1TCtAlrFuNtsOF_5VAl7HjAlX86AT0_Pp/view?usp=drive_link"
+
+
   # utter_one:
   # - text: ""
   #   buttons:
@@ -76,8 +93,3 @@ responses:
   #     - type: slot
   #       name: parent select_
   #       value: which value of parent select_ when selected should be shown here
-
-
-session_config:
-  session_expiration_time: 60
-  carry_over_slots_to_new_session: true

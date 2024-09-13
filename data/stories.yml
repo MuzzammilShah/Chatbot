@@ -2,6 +2,8 @@ version: "3.1"
 
 stories:
 
+
+#==========================UNEXPECTED PATHS-QUESTIONS=============================#
 - story: happy path
   steps:
   - intent: greet
@@ -29,9 +31,73 @@ stories:
   - intent: deny
   - action: utter_goodbye
 
+#==========================END OF UNEXPECTED PATHS-QUESTIONS=============================#
+
+#==========================EXPECTED PATHS-QUESTIONS=============================#
+
+# - story: Asking for Name
+#   steps:
+#     - intent: ask_name
+#     - action: select_utter_name
+
+- story: About me
+  steps:
+    - intent: ask_about_me
+    - action: utter_about_me
+
+# - story: Work Experience
+#   steps:
+#     - intent: ask_work_exp
+#     - action: utter_work_exp
+
+# - story: Work Exp 1
+#   steps:
+#     - intent: ask_work_exp1
+#     - action: utter_work_exp1
+
+# - story: Work Exp 2
+#   steps:
+#     - intent: ask_work_exp2
+#     - action: utter_work_exp2
+
+# - story: Skills obtained  #BUTTONS OPTIONS
+#   steps:
+#     - intent: ask_skills
+#       entities:
+#       - 
+#     - intent:
+#     - action:
+
+# - story: About Education  #DROP-DOWN
+#   steps:
+#     - intent: ask_education
+#     - action: utter_education
+
+# - story: Ask Certifications #CARD CAROUSEL
+#   steps:
+#     - intent: ask_certification
+#     - action: utter_certification
+
+# - story: Ask Other roles
+#   steps:
+#     - intent: ask_roles_responsibilities
+#     - action: utter_roles_responsibilities
+
+- story: Lets connect
+  steps:
+    - intent: ask_contact
+    - action: utter_contact
+
+- story: Download resume
+  steps:
+  - intent: ask_resume
+  - action: utter_resume
+
 # - story:
 #   steps:
 #     - intent:
 #       entities:
 #       - e:
 #     - action:
+
+#==========================END OF EXPECTED PATHS-QUESTIONS=============================#

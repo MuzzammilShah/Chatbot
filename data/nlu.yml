@@ -95,3 +95,40 @@ nlu:
 #     - chatbot
 #     - ai
 #     - robot
+
+
+- intent: ask_about_me
+  examples: |
+    - Tell me about yourself
+    - tell me about yourself
+    - Tell me about you
+    - tell me about you
+    - Introduce yourself
+    - introduce yourself
+    - Who are you?
+    - who are you?
+    - Whats your name?
+    - whats your name
+
+
+- intent: ask_resume
+  examples: |
+    - View Resume
+    - Resume
+    - show resume
+    - download resume
+    - resume
+    - can you show me your resume
+    - Provide me your resume to download
+    - Download resume
+    - Resume download
+    - Can I see your resume
+
+- intent: ask_contact
+  examples: |
+    - Contact Me
+    - How can I contact you?
+    - Can we connect?
+    - Lets connect on LinkedIn
+    - How can I reach out to you?
+    - Contact details
