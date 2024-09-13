@@ -40,6 +40,22 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(type, newTextDelay);
 });
 
+// window.onscroll = function() {
+//     // Get the amount the page has been scrolled vertically
+//     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+//     // Get the total height of the webpage (the sum of all sections)
+//     let documentHeight = document.documentElement.scrollHeight - window.innerHeight;
+
+//     // Calculate the horizontal scroll position for the background
+//     // Assuming the background image width is larger than the viewport, adjust the ratio.
+//     let horizontalPosition = (scrollTop / documentHeight) * 100; // Move from 0% to 100% horizontally
+
+//     // Update the background position to move horizontally based on vertical scroll
+//     document.body.style.backgroundPosition = `${horizontalPosition}% 0`;
+// };
+
+
 window.onscroll = function() {
     // Get the amount the page has been scrolled vertically
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -47,13 +63,13 @@ window.onscroll = function() {
     // Get the total height of the webpage (the sum of all sections)
     let documentHeight = document.documentElement.scrollHeight - window.innerHeight;
 
-    // Calculate the horizontal scroll position for the background
-    // Assuming the background image width is larger than the viewport, adjust the ratio.
-    let horizontalPosition = (scrollTop / documentHeight) * 100; // Move from 0% to 100% horizontally
+    // Calculate the vertical scroll position for the background
+    let verticalPosition = (scrollTop / documentHeight) * 100; // Move from 0% to 100% vertically
 
-    // Update the background position to move horizontally based on vertical scroll
-    document.body.style.backgroundPosition = `${horizontalPosition}% 0`;
+    // Update the background position to move vertically based on scroll
+    document.body.style.backgroundPosition = `0 ${verticalPosition}%`;  // Vertical scroll effect
 };
+
 
 // JavaScript to handle the modal popup
 document.addEventListener('DOMContentLoaded', function() {

@@ -522,10 +522,10 @@ video:focus {
 }
 
 body {
-  background-image: url('../img/wallpaper-1.png'); /* Replace with your image path */
+  background-image: url('../img/new-wallpaper.png'); /* Replace with your image path */
   background-position: 0 0;
   background-repeat: no-repeat;
-  background-size: 250%; /* Fit image height to viewport */
+  background-size: 130%; /* Fit image height to viewport */
   font-family: 'Helvetica', sans-serif;
   color: white;
   overflow-x: hidden;
