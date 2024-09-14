@@ -13,17 +13,9 @@ class ActionHelloWorld(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        dispatcher.utter_message(text="Lovely, let's have a chat then!")
-        dispatcher.utter_message(text="You can ask anything you would like to know about me!")
+        dispatcher.utter_message(text="Hi! You can ask anything you would like to know about me")
 
-        data= [ { "title":"Tell me about yourself", "payload":"/ask_about_me" }, { "title":"View Resume", "payload":"/ask_resume" }, { "title":"Contact Me", "payload":"/ask_contact" } ]
-        message={"payload":"quickReplies","data":data}
-
-        dispatcher.utter_message(text="Or not sure what to ask? How about these:", json_message=message)
-
-        # buttons = [
-        #     {"title": "", "payload": "/select_sub_one{{\"eSubOne\":\"SubOne\"}}"},
-        # ]
-        # dispatcher.utter_message(buttons=buttons)
+        # data= [ { "title":"Tell me about yourself", "payload":"/ask_about_me" }, { "title":"View Resume", "payload":"/ask_resume" }, { "title":"Contact Me", "payload":"/ask_contact" } ]
+        # dispatcher.utter_message(text="Or not sure what to ask? How about these:", buttons=data)
 
         return []

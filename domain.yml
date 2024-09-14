@@ -68,7 +68,11 @@ responses:
   - text: "Ofcourse! I am Muhammed Shah. I am a detail-oriented AI Engineer with a passion for... well, AI. And my work focuses on bring the practical applications of AI to life!"
 
   utter_contact:
-  - text: "Sure, Let's [connect on LinkedIn](https://www.linkedin.com/in/muhammed-shah/)!"
+  - text: "Sure, Let's connect on LinkedIn"
+    custom:
+      payload: pdf_attachment
+      title: "LinkedIn Profile"
+      url: "https://www.linkedin.com/in/muhammed-shah/"
  
   utter_resume:
   - text: ""

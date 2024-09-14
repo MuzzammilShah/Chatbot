@@ -489,15 +489,16 @@ video:focus {
   height: 14%;
   border-radius: 10px;
   margin-left: 10%;
-  box-shadow: 2px 3px 9px 0px #9a82842e;
+  box-shadow: 2px 3px 9px 0px #4d6061;
+  background: #0000009a;
+  font-weight: 100;
 }
 
 .pdf_icon {
-  border-radius: 10px 0px 0px 10px;
   height: 100%;
-  font-size: 25px;
+  font-size: 50px;
   padding: 7% !important;
-  background-color: #4d6061;
+  background-color: #000000;
   color: white;
 }
 
@@ -509,7 +510,7 @@ video:focus {
 }
 
 .pdf_link a {
-  color: #4d6061;
+  color: #ffffff;
 }
 
 
