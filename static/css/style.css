@@ -490,7 +490,7 @@ video:focus {
 /* Bot pop-up intro */
 
 .tap-target {
-  color: #000000;
+  color: #ffffff;
   background: #4d6061;
 }
 
@@ -527,8 +527,6 @@ video:focus {
 .pdf_link a {
   color: #ffffff;
 }
-
-
 
 /* General overall design section */
 * {
