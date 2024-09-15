@@ -19,6 +19,10 @@ intents:
   - ask_about_me
   - ask_resume
   - ask_contact
+  - ask_work_experience
+  - ask_certifications
+  - ask_roles_responsibilities
+  - ask_education
   # - select_one
   # - select_one_1
 
@@ -65,7 +69,7 @@ responses:
 
 
   utter_about_me:
-  - text: "Ofcourse! I am Muhammed Shah. I am a detail-oriented AI Engineer with a passion for... well, AI. And my work focuses on bring the practical applications of AI to life!"
+  - text: "I am Muhammed Shah. I am a detail-oriented AI Engineer with a passion for... well, AI.\n\nMy work focuses on bring the practical applications of AI to life. Such as this chatbot!"
 
   utter_contact:
   - text: "Sure, Let's connect on LinkedIn"
@@ -74,8 +78,20 @@ responses:
       title: "LinkedIn Profile"
       url: "https://www.linkedin.com/in/muhammed-shah/"
  
+  utter_work_experience:
+  - text: "I have worked as an AI Intern at Wipro Technologies from March to June 2023, focusing on AI observability, ML model monitoring, RCA, anomaly detection, and capacity forecasting.\n\nI'm currently an Engineer Trainee at Potentiam Ltd, where I focus on AI-driven initiatives such as chatbot development, project management, and cybersecurity audits."
+
+  utter_certifications:
+  - text: "I hold multiple certifications including Developing AI Applications with Python and Flask, Generative AI with Large Language Models and Rasa Chatbot Developer Certification from institutions like DeepLearning.AI and IBM."
+
+  utter_roles_responsibilities:
+  - text: "I served as the Director of Design for TEDxMVJCE, for 3 TEDx events.\n\nI was also the Vice President and Head of Social Media for Saahitya, overseeing various divisions, organizing meetings, and conducting auditions."
+
+  utter_education:
+  - text: "I have a Bachelor's in Computer Science from MVJ College of Engineering with a CGPA of 9.32, ranking in the top 10 of my department.\n\nI also attended Primus Public School and St. Peter's School, excelling in Computer Science."
+
   utter_resume:
-  - text: ""
+  - text: "Click here to view my resume:"
     custom:
       payload: pdf_attachment
       title: "My Resume"

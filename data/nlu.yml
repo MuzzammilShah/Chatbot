@@ -96,7 +96,6 @@ nlu:
 #     - ai
 #     - robot
 
-
 - intent: ask_about_me
   examples: |
     - Tell me about yourself
@@ -109,6 +108,40 @@ nlu:
     - who are you?
     - Whats your name?
     - whats your name
+    - What do you do?
+    - Tell me more about you
+    - Who is the AI engineer?
+- intent: ask_work_experience
+  examples: |
+    - Can you share your work experience?
+    - Tell me about your professional background
+    - What companies have you worked for?
+    - Where did you intern?
+    - What projects have you worked on?
+
+- intent: ask_certifications
+  examples: |
+    - Tell me about your certifications
+    - What certifications do you have?
+    - What skills do you have from certifications?
+    - Which courses have you completed?
+    - Do you have any certifications in AI?
+
+- intent: ask_roles_responsibilities
+  examples: |
+    - What were your roles in previous organizations?
+    - Can you tell me about your leadership roles?
+    - What responsibilities did you have at TEDxMVJCE?
+    - What were your duties as the VP of Saahitya?
+    - Did you lead any teams?
+
+- intent: ask_education
+  examples: |
+    - Can you tell me about your education?
+    - What degree do you hold?
+    - Where did you study?
+    - Tell me about your academic background
+    - What were your grades in college?
 
 
 - intent: ask_resume

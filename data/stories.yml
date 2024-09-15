@@ -45,6 +45,27 @@ stories:
     - intent: ask_about_me
     - action: utter_about_me
 
+- story: Work experience
+  steps:
+    - intent: ask_work_experience
+    - action: utter_work_experience
+
+- story: Certifications
+  steps:
+    - intent: ask_certifications
+    - action: utter_certifications
+
+- story: Roles and Responsibilities
+  steps:
+    - intent: ask_roles_responsibilities
+    - action: utter_roles_responsibilities
+
+- story: Education
+  steps:
+    - intent: ask_education
+    - action: utter_education
+
+
 # - story: Work Experience
 #   steps:
 #     - intent: ask_work_exp
