@@ -144,6 +144,27 @@ nlu:
     - What were your grades in college?
 
 
+- intent: ask_projects
+  examples: |
+    - What all projects have you done
+    - What projects have you done?
+    - List ot your projects
+    - Your projects
+    - Have you done any projects?
+    - Have you done any other projects?
+    - Can you list out the projects done by you
+
+
+- intent: ask_skills
+  examples: |
+    - What are your skills?
+    - List your skills
+    - Top 10 skills
+    - What are you good at?
+    - What do you think your strengths are?
+    - What are your strengths?
+
+
 - intent: ask_resume
   examples: |
     - View Resume

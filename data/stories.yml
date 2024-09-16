@@ -50,10 +50,31 @@ stories:
     - intent: ask_work_experience
     - action: utter_work_experience
 
-- story: Certifications
+- story: Certifications - Yes
   steps:
     - intent: ask_certifications
     - action: utter_certifications
+    - intent: affirm
+    - action: utter_list_certifications
+
+- story: Certifications - No
+  steps:
+    - intent: ask_certifications
+    - action: utter_certifications
+    - intent: deny
+    - action: utter_link_to_certifications
+
+- story: Projects
+  steps:
+    - intent: ask_projects
+    - action: utter_projects
+
+
+- story: Skills
+  steps:
+    - intent: ask_skills
+    - action: utter_skills
+
 
 - story: Roles and Responsibilities
   steps:

@@ -21,6 +21,8 @@ intents:
   - ask_contact
   - ask_work_experience
   - ask_certifications
+  - ask_projects
+  - ask_skills
   - ask_roles_responsibilities
   - ask_education
   # - select_one
@@ -71,6 +73,7 @@ responses:
   utter_about_me:
   - text: "I am Muhammed Shah. I am a detail-oriented AI Engineer with a passion for... well, AI.\n\nMy work focuses on bring the practical applications of AI to life. Such as this chatbot!"
 
+
   utter_contact:
   - text: "Sure, Let's connect on LinkedIn"
     custom:
@@ -78,17 +81,80 @@ responses:
       title: "LinkedIn Profile"
       url: "https://www.linkedin.com/in/muhammed-shah/"
  
+
   utter_work_experience:
-  - text: "I have worked as an AI Intern at Wipro Technologies from March to June 2023, focusing on AI observability, ML model monitoring, RCA, anomaly detection, and capacity forecasting.\n\nI'm currently an Engineer Trainee at Potentiam Ltd, where I focus on AI-driven initiatives such as chatbot development, project management, and cybersecurity audits."
+  - text: "I'm currently an Engineer Trainee at Potentiam Ltd and I have previously worked at Wipro Technologies as an AI Intern.\n\nYou may navigate to the WORK EXPERIENCE section for more details or read a summary here:"
+    custom: 
+        payload: "collapsible"
+        data: 
+        - title: AI Engineer Trainee - Potentiam Ltd
+          description: Collaborating closely with the Founder Director and Global CIO of our company, primarily focusing on AI-driven initiatives. My contributions span various aspects of project management, research and development, and stakeholder engagement.
+
+        - title: AI Intern - Wipro Technologies
+          description: Focused on improving AI observability, Detecting Anomalies and Optimizing Capacity Forecasting. Also worked on developing and fine-tuning LLMs using LangChain, implementing a pilot Q&A system over documents.
+
 
   utter_certifications:
-  - text: "I hold multiple certifications including Developing AI Applications with Python and Flask, Generative AI with Large Language Models and Rasa Chatbot Developer Certification from institutions like DeepLearning.AI and IBM."
+  - text: "I hold multiple certifications on Generative AI, Developing AI Applications, Large Language Models and Chatbot Development from top institutions.\n\nWould you like me to list them down for a more detailed explaination?"
+
+
+  utter_list_certifications:
+  - text: "Sure, here is the entire list:"
+    custom:
+        payload: "collapsible"
+        data:
+        - title: Generative AI with LLMs
+          description:  Gained foundational knowledge, practical skills, and a functional understanding of how generative AI works.
+
+        - title: Developing AI Applications
+          description:  Created and deployed an AI-based application onto a web server using IBM Watson AI Libraries and Flask.
+
+        - title: Career Essentials in GenAI
+          description:  A Learning path conducted by Microsoft.
+
+        - title: Rasa Developer
+          description:  Graded certification with knowledge on Rasa architecture and chatbot development.
+
+        - title: Machine Learning Nanodegree
+          description:  Nanodegree course covering various ranges of concept ML programs.
+
+        - title: Python Nanodegree
+          description:  Nanodegree course of theory and practical training on Python Programming Language.
+
+        - title: OpenSource Models with HuggingFace
+          description:  Short-Course with a practical experience on leveraging HuggingFace Models
+
+        - title: Prompt Engineering
+          description:  Short-Course with a practical experience on the art of prompt engineering.
+
+
+  utter_link_to_certifications:
+  - text: "No problem, you can find the credentials under the CERTIFICATIONS section or view them from this link anytime!"
+    custom:
+      payload: pdf_attachment
+      title: "LinkedIn Profile"
+      url: "https://www.linkedin.com/in/muhammed-shah/details/certifications/"
+
+
+  utter_projects:
+  - text: "You can view all of my projects through my GitHub profile!"
+    custom:
+      payload: pdf_attachment
+      title: "GitHub Profile"
+      url: "https://github.com/MuzzammilShah?tab=repositories"
+
+
+  utter_skills:
+  - text: "I specialize in AI, machine learning, chatbot development, and strategic planning, with expertise in tools like Azure AI, Power BI, and ELK stack.\n\nI also possess strong communication, project management, and cybersecurity skills."
+
 
   utter_roles_responsibilities:
   - text: "I served as the Director of Design for TEDxMVJCE, for 3 TEDx events.\n\nI was also the Vice President and Head of Social Media for Saahitya, overseeing various divisions, organizing meetings, and conducting auditions."
 
+
   utter_education:
   - text: "I have a Bachelor's in Computer Science from MVJ College of Engineering with a CGPA of 9.32, ranking in the top 10 of my department.\n\nI also attended Primus Public School and St. Peter's School, excelling in Computer Science."
+
 
   utter_resume:
   - text: "Click here to view my resume:"
