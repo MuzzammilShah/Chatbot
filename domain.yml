@@ -132,7 +132,7 @@ responses:
   - text: "No problem, you can find the credentials under the CERTIFICATIONS section or view them from this link anytime!"
     custom:
       payload: pdf_attachment
-      title: "LinkedIn Profile"
+      title: "Licenses & Certifications"
       url: "https://www.linkedin.com/in/muhammed-shah/details/certifications/"
 
 
@@ -149,11 +149,22 @@ responses:
 
 
   utter_roles_responsibilities:
-  - text: "I served as the Director of Design for TEDxMVJCE, for 3 TEDx events.\n\nI was also the Vice President and Head of Social Media for Saahitya, overseeing various divisions, organizing meetings, and conducting auditions."
+  - text: "I served as the Director of Design for TEDxMVJCE, for 3 TEDx events and have also taken part in Model United Nations.\n\nI was also the Vice President and Head of Social Media for Saahitya, overseeing various divisions, organizing meetings, and conducting auditions."
 
 
   utter_education:
-  - text: "I have a Bachelor's in Computer Science from MVJ College of Engineering with a CGPA of 9.32, ranking in the top 10 of my department.\n\nI also attended Primus Public School and St. Peter's School, excelling in Computer Science."
+  - text: "I have acquired a B.Tech degree in Computer Science and Engineering with an overall CGPA of 9.32, ranking in the top 10 of my department.\n\n Here is a list of all the education I have received:"
+    custom:
+        payload: "collapsible"
+        data:
+        - title: MVJ College of Engineering, Bachelor of Engineering
+          description:  Grade- 9.32 CGPA, Top 10 Rank Holder- Dept of CSE. 
+
+        - title: Primus PU College, PCMC
+          description:  Grade- 86.5%
+
+        - title: St. Peter's School, I.C.S.E
+          description:  Grade- 92.4%, Topper in Computer Science
 
 
   utter_resume:
