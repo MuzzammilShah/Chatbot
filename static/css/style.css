@@ -368,18 +368,20 @@ div.content_data::-webkit-scrollbar {
 /* css for collapsible */
 
 .collapsible {
-  margin-top: 5px;
-  margin-left: 5%;
-  max-width: 60%;
+  margin-top: 10px;
+  margin-left: 2.5em;
+  max-width: 70%;
   min-width: 25%;
   font-size: 13px;
   word-wrap: break-word;
-  border-radius: 20px;
+  border-radius: 5px;
   background: white;
 }
 
 .collapsible-body {
   padding: 15px;
+  color: #000000;
+  font-family: "Open Sans", sans-serif;
 }
 
 .collapsible-header {
@@ -398,6 +400,7 @@ ul.collapsible > li:last-child .collapsible-header {
 
 ul.collapsible > li:last-child .collapsible-body {
   border-bottom: none;
+  color: #000000;
 }
 
 .collapsible-header {

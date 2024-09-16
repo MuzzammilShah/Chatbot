@@ -15,7 +15,7 @@ class ActionHelloWorld(Action):
 
         dispatcher.utter_message(text="Hi! You can ask anything you would like to know about me")
 
-        data= [ { "title":"Tell me about yourself", "payload":"/ask_about_me" }, { "title":"View Resume", "payload":"/ask_resume" }, { "title":"Contact Me", "payload":"/ask_contact" } ]
-        dispatcher.utter_message(text="Or not sure what to ask? How about these:", buttons=data)
+        data= [ { "title":"About Me", "payload":"/ask_about_me" }, { "title":"Work Experience", "payload":"/ask_work_experience" }, { "title":"My Projects", "payload":"/ask_projects" }, { "title":"My Resume", "payload":"/ask_resume" }, { "title":"Contact Me", "payload":"/ask_contact" } ]
+        dispatcher.utter_message(text="You could also start with one of these:", buttons=data)
 
         return []
