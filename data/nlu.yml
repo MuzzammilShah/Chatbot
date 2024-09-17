@@ -191,3 +191,26 @@ nlu:
     - Lets connect on LinkedIn
     - How can I reach out to you?
     - Contact details
+
+- intent: ask_give_options
+  examples: |
+    - What can you do?
+    - Show me the main menu
+    - What can i ask you about?
+    - What can you do?
+    - Can you show me some questions?
+    - What all can i ask you?
+    - What can you tell me?
+    - What can you show me?
+    - What can you do?
+
+- intent: ask_follow_up
+  examples: |
+    - Would you like to know anything else?
+    - Would you like to ask something else?
+    - Show main menu
+    - Show me more
+    - Take me to the main menu
+    - Restart chat
+    - Restart
+    - restart

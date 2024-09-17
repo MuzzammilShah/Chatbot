@@ -11,25 +11,12 @@ stories:
   - intent: mood_great
   - action: utter_happy
 
-- story: sad path 1
+- story: sad path
   steps:
   - intent: greet
   - action: utter_greet
   - intent: mood_unhappy
   - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
-
-- story: sad path 2
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
-  - action: utter_goodbye
 
 #==========================END OF UNEXPECTED PATHS-QUESTIONS=============================#
 
@@ -55,14 +42,14 @@ stories:
     - intent: ask_certifications
     - action: utter_certifications
     - intent: affirm
-    - action: utter_list_certifications
+    - action: utter_link_to_certifications
 
 - story: Certifications - No
   steps:
     - intent: ask_certifications
     - action: utter_certifications
     - intent: deny
-    - action: utter_link_to_certifications
+    - action: utter_goodbye
 
 - story: Projects
   steps:
@@ -96,6 +83,11 @@ stories:
   steps:
   - intent: ask_resume
   - action: utter_resume
+
+- story: Giving user options
+  steps:
+  - intent: ask_give_options
+  - action: action_main_menu
 
 # - story:
 #   steps:

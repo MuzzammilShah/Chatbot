@@ -25,6 +25,8 @@ intents:
   - ask_skills
   - ask_roles_responsibilities
   - ask_education
+  - ask_give_options
+  - ask_follow_up
   # - select_one
   # - select_one_1
 
@@ -48,6 +50,7 @@ intents:
 
 actions:
   - action_hello_world
+  - action_main_menu
 
 responses:
   utter_greet:
@@ -55,28 +58,38 @@ responses:
 
   utter_cheer_up:
   - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
+    image: "https://i.pinimg.com/originals/da/72/75/da72758f273c755c6f3ea6b983b294b7.jpg"
 
-  utter_did_that_help:
-  - text: "Did that help you?"
+  # utter_did_that_help:
+  # - text: "Did that help you?"
 
   utter_happy:
-  - text: "Great, carry on!"
+  - text: ""
+    image: "https://i.pinimg.com/originals/32/c6/db/32c6db68576a9535537cdc0ce82a3a1f.jpg"
 
   utter_goodbye:
-  - text: "Bye! Feel free to comeback if you would like to know more about"
+  - text: "Feel free to comeback if you would like to know more!"
 
   utter_iamabot:
   - text: "I am a bot, created by Muhammed Shah!"
 
 
   utter_about_me:
-  - text: "I am Muhammed Shah. I am a detail-oriented AI Engineer with a passion for... well, AI.\n\nMy work focuses on bring the practical applications of AI to life. Such as this chatbot!"
+  - text: "I am Muhammed Shah and My work focuses on bring the practical applications of AI to life, Such as this chatbot :)\n\nHere's more things you can learn about me:"
     buttons:
-    - title: "great"
-      payload: "great"
-    - title: "super sad"
-      payload: "super sad"
+    - title:  "Work Experience"
+      payload:  "/ask_work_experience"
+    - title:  "Roles of Responsibilities"
+      payload:  "/ask_roles_responsibilities"
+    - title:  "Certifications Obtained"
+      payload:  "/ask_certifications"
+    - title:  "My Projects"
+      payload:  "/ask_projects"
+    - title:  "My Resume"
+      payload:  "/ask_resume"
+    - title:  "Contact Me"
+      payload:  "/ask_contact"
+
 
   utter_contact:
   - text: "Sure, Let's connect on LinkedIn"
@@ -105,35 +118,6 @@ responses:
       payload: "Yes"
     - title: "No"
       payload: "No"
-
-  utter_list_certifications:
-  - text: "Sure, here is the entire list:"
-    custom:
-        payload: "collapsible"
-        data:
-        - title: Generative AI with LLMs (Read more)
-          description:  Gained foundational knowledge, practical skills, and a functional understanding of how generative AI works.
-
-        - title: Developing AI Applications (Read more)
-          description:  Created and deployed an AI-based application onto a web server using IBM Watson AI Libraries and Flask.
-
-        - title: Career Essentials in GenAI (Read more)
-          description:  A Learning path conducted by Microsoft.
-
-        - title: Rasa Developer (Read more)
-          description:  Graded certification with knowledge on Rasa architecture and chatbot development.
-
-        - title: Machine Learning Nanodegree (Read more)
-          description:  Nanodegree course covering various ranges of concept ML programs.
-
-        - title: Python Nanodegree (Read more)
-          description:  Nanodegree course of theory and practical training on Python Programming Language.
-
-        - title: OpenSource Models with HuggingFace (Read more)
-          description:  Short-Course with a practical experience on leveraging HuggingFace Models
-
-        - title: Prompt Engineering (Read more)
-          description:  Short-Course with a practical experience on the art of prompt engineering.
 
 
   utter_link_to_certifications:
@@ -202,3 +186,33 @@ responses:
   #     - type: slot
   #       name: parent select_
   #       value: which value of parent select_ when selected should be shown here
+
+  
+  # utter_list_certifications:
+  # - text: "Sure, here is the entire list:"
+  #   custom:
+  #       payload: "collapsible"
+  #       data:
+  #       - title: Generative AI with LLMs (Read more)
+  #         description:  Gained foundational knowledge, practical skills, and a functional understanding of how generative AI works.
+
+  #       - title: Developing AI Applications (Read more)
+  #         description:  Created and deployed an AI-based application onto a web server using IBM Watson AI Libraries and Flask.
+
+  #       - title: Career Essentials in GenAI (Read more)
+  #         description:  A Learning path conducted by Microsoft.
+
+  #       - title: Rasa Developer (Read more)
+  #         description:  Graded certification with knowledge on Rasa architecture and chatbot development.
+
+  #       - title: Machine Learning Nanodegree (Read more)
+  #         description:  Nanodegree course covering various ranges of concept ML programs.
+
+  #       - title: Python Nanodegree (Read more)
+  #         description:  Nanodegree course of theory and practical training on Python Programming Language.
+
+  #       - title: OpenSource Models with HuggingFace (Read more)
+  #         description:  Short-Course with a practical experience on leveraging HuggingFace Models
+
+  #       - title: Prompt Engineering (Read more)
+  #         description:  Short-Course with a practical experience on the art of prompt engineering.
