@@ -204,7 +204,7 @@ nlu:
     - What can you show me?
     - What can you do?
 
-- intent: ask_follow_up
+- intent: ask_manual_follow_up
   examples: |
     - Would you like to know anything else?
     - Would you like to ask something else?
@@ -214,3 +214,4 @@ nlu:
     - Restart chat
     - Restart
     - restart
+    - Show Main Menu

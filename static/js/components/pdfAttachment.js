@@ -10,5 +10,6 @@ function renderPdfAttachment(pdf_data) {
 ${pdf_title} </a></div></div></div>`;
 
     $(".chats").append(pdf_attachment);
+    // $(pdf_attachment).appendTo(".chats");
     scrollToBottomOfResults();
 }

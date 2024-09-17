@@ -43,7 +43,7 @@ function setBotResponse(response) {
     hideBotTyping();
     if (response.length < 1) {
       // if there is no response from Rasa, send  fallback message to the user
-      const fallbackMsg = "I am facing some issues, please try again later!!!";
+      const fallbackMsg = "It seems like I am facing some issues at the moment :(\n\n Please try again later";
 
       const BotResponse = `<img class="botAvatar" src="./static/img/profile.png"/><p class="botMsg">${fallbackMsg}</p><div class="clearfix"></div>`;
 
@@ -240,7 +240,7 @@ async function send(message) {
         $("#userInput").prop("disabled", false);
 
         // if you want the bot to start the conversation after restart
-        // customActionTrigger();
+        customActionTrigger();
         return;
       }
       setBotResponse(botResponse);
@@ -249,8 +249,8 @@ async function send(message) {
       if (message.toLowerCase() === "/restart") {
         $("#userInput").prop("disabled", false);
         // if you want the bot to start the conversation after the restart action.
-        // actionTrigger();
-        // return;
+        actionTrigger();
+        return;
       }
 
       // if there is no response from rasa server, set error bot response
@@ -419,3 +419,33 @@ $("#sendButton").on("click", (e) => {
   e.preventDefault();
   return false;
 });
+
+
+// //ADDED BY ME
+// function myCustomActionTrigger() {
+//   $.ajax({
+//     url: "http://localhost:5055/webhook/",
+//     type: "POST",
+//     contentType: "application/json",
+//     data: JSON.stringify({
+//       next_action: my_action_name,
+//       tracker: {
+//         sender_id,
+//       },
+//     }),
+//     success(botResponse, status) {
+//       console.log("Response from Rasa: ", botResponse, "\nStatus: ", status);
+
+//       if (Object.hasOwnProperty.call(botResponse, "responses")) {
+//         setBotResponse(botResponse.responses);
+//       }
+//       $("#userInput").prop("disabled", false);
+//     },
+//     error(xhr, textStatus) {
+//       // if there is no response from rasa server
+//       setBotResponse("");
+//       console.log("Error from bot end: ", textStatus);
+//       $("#userInput").prop("disabled", false);
+//     },
+//   });
+// }
