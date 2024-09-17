@@ -111,6 +111,7 @@ nlu:
     - What do you do?
     - Tell me more about you
     - Who is the AI engineer?
+  
 - intent: ask_work_experience
   examples: |
     - Can you share your work experience?
@@ -134,6 +135,10 @@ nlu:
     - What responsibilities did you have at TEDxMVJCE?
     - What were your duties as the VP of Saahitya?
     - Did you lead any teams?
+    - Have you shown any leadership?
+    - Have you taken part in any extra curricular activities?
+    - Have you taken part in cultural events?
+    - Tell me about your club activities
 
 - intent: ask_education
   examples: |
