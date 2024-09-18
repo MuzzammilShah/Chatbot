@@ -364,6 +364,17 @@ div.content_data::-webkit-scrollbar {
   color: white;
 }
 
+/* css for image card */
+
+.imgcard {
+  margin-top: 0.5em;
+  object-fit:contain;
+  width: 80%;
+  height: 50%;
+  border-radius: 10px;
+  /* margin-left: 1em; */
+}
+
 /* css for collapsible */
 
 .collapsible {
@@ -499,9 +510,10 @@ video:focus {
 .pdf_attachment {
   border: 0.5px solid #00000014;
   width: 60%;
-  height: 14%;
+  height: 14%; /* Adjust the height automatically */
   margin-left: 10%;
   margin-top: 2%;
+  margin-bottom: 10px; /* Add a bottom margin */
   box-shadow: 0px 0px 0px 0px #4d6061;
   background: #0000009a;
   font-weight: 100;

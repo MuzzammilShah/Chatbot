@@ -47,3 +47,25 @@ class ActionFollowUp(Action):
         dispatcher.utter_message(text="Feel free to continue to chat with me or choose any of the below", buttons=data)
 
         return []
+
+# class ActionAfterLink(Action):
+
+#     def name(self) -> Text:
+#         return "action_after_link"
+
+#     def run(self, dispatcher: CollectingDispatcher,
+#             tracker: Tracker,
+#             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+#         data = {
+#             "payload":"pdf_attachment",
+#             "title": "GitHub Profile",
+#             "url": "https://github.com/MuzzammilShah?tab=repositories"
+#         }
+
+#         dispatcher.utter_message(json_message=data)
+
+#         followupdata= [{ "title":"Show Main Menu", "payload":"/ask_give_options" }, { "title":"End Chat", "payload":"/goodbye" }]
+#         dispatcher.utter_message(text="Feel free to continue to chat with me or choose any of the below", buttons=followupdata)
+
+#         return []

@@ -52,6 +52,7 @@ actions:
   - action_hello_world
   - action_main_menu
   - action_follow_up
+  # - action_after_link
 
 responses:
   utter_greet:
@@ -65,7 +66,7 @@ responses:
   # - text: "Did that help you?"
 
   utter_happy:
-  - text: ""
+  - text: "That's great!"
     image: "https://i.pinimg.com/originals/32/c6/db/32c6db68576a9535537cdc0ce82a3a1f.jpg"
 
   utter_goodbye:

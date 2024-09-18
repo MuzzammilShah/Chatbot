@@ -140,8 +140,10 @@ function setBotResponse(response) {
 
           // check if the custom payload type is "pdf_attachment"
           if (payload === "pdf_attachment") {
+            // const pdf_data = response[i].custom.data;
+            // renderPdfAttachment(pdf_data)
             renderPdfAttachment(response[i]);
-            return;
+            // return;
           }
 
           // check if the custom payload type is "dropDown"
