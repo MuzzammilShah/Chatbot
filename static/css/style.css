@@ -33,7 +33,7 @@
   color: white;
   float: left;
   margin-top: 3%;
-  margin-left: 38%;
+  margin-left: 10%;
 }
 
 .chats {
@@ -192,9 +192,14 @@ blockquote {
   text-align: center;
   padding: 5px;
   font-size: 20px;
-  cursor: pointer;
-  color: #4d6061;
+  /* cursor: pointer; */ 
+  color: white;
+  /* transition: color 0.3s ease; */
 }
+
+/* #sendButton:hover {
+  color: #4d6061;
+} */
 
 .imgProfile {
   box-shadow: 0 0px 1px 0 rgba(0, 0, 0, 0.16), 0 0px 10px 0 #00000096;
@@ -244,6 +249,28 @@ blockquote {
     transform: translate(0px, 0px);
   }
 }
+
+/* Added by me */
+
+/* Icon action styles */
+.icon-action {
+  cursor: pointer;
+  color: white;
+  margin-right: 10px;
+  float: right;
+  margin-top: 3%;
+}
+
+.icon-action i {
+  font-size: 24px; /* Adjust icon size if needed */
+  transition: color 0.3s ease;
+}
+
+/* Hover effect on icons */
+.icon-action:hover i {
+  color: #4d6061; /* Change to desired hover color */
+}
+
 
 /*========== css related to chats elements============= */
 
@@ -577,8 +604,10 @@ body {
 .cursor {
   display: inline-block;
   background-color: white;
-  width: 10px;
-  height: 2rem;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%; /* Makes it circular */
+  margin-left: 8px; /* Adds space between text and cursor */
   animation: blink 0.7s infinite;
 }
 

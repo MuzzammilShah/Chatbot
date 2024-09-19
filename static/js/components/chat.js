@@ -237,9 +237,9 @@ async function send(message) {
     success(botResponse, status) {
       console.log("Response from Rasa: ", botResponse, "\nStatus: ", status);
 
-      // if user wants to restart the chat and clear the existing chat contents
+      // // if user wants to restart the chat and clear the existing chat contents
       if (message.toLowerCase() === "/restart") {
-        $("#userInput").prop("disabled", false);
+        // $("#userInput").prop("disabled", false); // UNCOMMENT THIS FOR ACTIVATING KEYPAD AND SEND BUTTON
 
         // if you want the bot to start the conversation after restart
         customActionTrigger();
@@ -249,7 +249,7 @@ async function send(message) {
     },
     error(xhr, textStatus) {
       if (message.toLowerCase() === "/restart") {
-        $("#userInput").prop("disabled", false);
+        // $("#userInput").prop("disabled", false); // UNCOMMENT THIS FOR ACTIVATING KEYPAD AND SEND BUTTON
         // if you want the bot to start the conversation after the restart action.
         actionTrigger();
         return;
@@ -284,13 +284,13 @@ function actionTrigger() {
       if (Object.hasOwnProperty.call(botResponse, "messages")) {
         setBotResponse(botResponse.messages);
       }
-      $("#userInput").prop("disabled", false);
+      // $("#userInput").prop("disabled", false); // UNCOMMENT THIS FOR ACTIVATING KEYPAD AND SEND BUTTON
     },
     error(xhr, textStatus) {
       // if there is no response from rasa server
       setBotResponse("");
       console.log("Error from bot end: ", textStatus);
-      $("#userInput").prop("disabled", false);
+      // $("#userInput").prop("disabled", false);
     },
   });
 }
@@ -322,13 +322,13 @@ function customActionTrigger() {
       if (Object.hasOwnProperty.call(botResponse, "responses")) {
         setBotResponse(botResponse.responses);
       }
-      $("#userInput").prop("disabled", false);
+      // $("#userInput").prop("disabled", false); // UNCOMMENT THIS FOR ACTIVATING KEYPAD AND SEND BUTTON
     },
     error(xhr, textStatus) {
       // if there is no response from rasa server
       setBotResponse("");
       console.log("Error from bot end: ", textStatus);
-      $("#userInput").prop("disabled", false);
+      // $("#userInput").prop("disabled", false);     
     },
   });
 }
@@ -359,69 +359,73 @@ $("#restart").click(() => {
   restartConversation();
 });
 
+// UNCOMMENT THIS ENTIRE SECTION FOR KEYPAD AND SEND BUTTON
+// OTHER AREAS TO UNCOMMENT FOR KEYPAD: send(), actionTrigger() and customActionTrigger()
+
 /**
  * if user hits enter or send button
  * */
-$(".usrInput").on("keyup keypress", (e) => {
-  const keyCode = e.keyCode || e.which;
+// $(".usrInput").on("keyup keypress", (e) => {
+//   const keyCode = e.keyCode || e.which;
 
-  const text = $(".usrInput").val();
-  if (keyCode === 13) {
-    if (text === "" || $.trim(text) === "") {
-      e.preventDefault();
-      return false;
-    }
-    // destroy the existing chart, if yu are not using charts, then comment the below lines
-    $(".collapsible").remove();
-    $(".dropDownMsg").remove();
-    if (typeof chatChart !== "undefined") {
-      chatChart.destroy();
-    }
+//   const text = $(".usrInput").val();
+//   if (keyCode === 13) {
+//     if (text === "" || $.trim(text) === "") {
+//       e.preventDefault();
+//       return false;
+//     }
+//     // destroy the existing chart, if yu are not using charts, then comment the below lines
+//     $(".collapsible").remove();
+//     $(".dropDownMsg").remove();
+//     if (typeof chatChart !== "undefined") {
+//       chatChart.destroy();
+//     }
 
-    $(".chart-container").remove();
-    if (typeof modalChart !== "undefined") {
-      modalChart.destroy();
-    }
+//     $(".chart-container").remove();
+//     if (typeof modalChart !== "undefined") {
+//       modalChart.destroy();
+//     }
 
-    $("#paginated_cards").remove();
-    $(".suggestions").remove();
-    $(".quickReplies").remove();
-    $(".usrInput").blur();
-    setUserResponse(text);
-    send(text);
-    e.preventDefault();
-    return false;
-  }
-  return true;
-});
+//     $("#paginated_cards").remove();
+//     $(".suggestions").remove();
+//     $(".quickReplies").remove();
+//     $(".usrInput").blur();
+//     setUserResponse(text);
+//     send(text);
+//     e.preventDefault();
+//     return false;
+//   }
+//   return true;
+// });
 
-$("#sendButton").on("click", (e) => {
-  const text = $(".usrInput").val();
-  if (text === "" || $.trim(text) === "") {
-    e.preventDefault();
-    return false;
-  }
-  // destroy the existing chart
-  if (typeof chatChart !== "undefined") {
-    chatChart.destroy();
-  }
+// $("#sendButton").on("click", (e) => {
+//   const text = $(".usrInput").val();
+//   if (text === "" || $.trim(text) === "") {
+//     e.preventDefault();
+//     return false;
+//   }
+//   // destroy the existing chart
+//   if (typeof chatChart !== "undefined") {
+//     chatChart.destroy();
+//   }
 
-  $(".chart-container").remove();
-  if (typeof modalChart !== "undefined") {
-    modalChart.destroy();
-  }
+//   $(".chart-container").remove();
+//   if (typeof modalChart !== "undefined") {
+//     modalChart.destroy();
+//   }
 
-  $(".suggestions").remove();
-  $("#paginated_cards").remove();
-  $(".quickReplies").remove();
-  $(".usrInput").blur();
-  $(".dropDownMsg").remove();
-  setUserResponse(text);
-  send(text);
-  e.preventDefault();
-  return false;
-});
+//   $(".suggestions").remove();
+//   $("#paginated_cards").remove();
+//   $(".quickReplies").remove();
+//   $(".usrInput").blur();
+//   $(".dropDownMsg").remove();
+//   setUserResponse(text);
+//   send(text);
+//   e.preventDefault();
+//   return false;
+// });
 
+// TILL HERE FOR - UNCOMMENT THIS ENTIRE SECTION FOR KEYPAD AND SEND BUTTON
 
 // //ADDED BY ME
 // function myCustomActionTrigger() {
