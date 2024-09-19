@@ -42,16 +42,16 @@ stories:
   steps:
     - intent: ask_certifications
     - action: utter_certifications
-    - intent: affirm
-    - action: utter_link_to_certifications
+    # - intent: affirm
+    # - action: utter_link_to_certifications
     - action: action_follow_up
 
-- story: Certifications - No
-  steps:
-    - intent: ask_certifications
-    - action: utter_certifications
-    - intent: deny
-    - action: action_follow_up
+# - story: Certifications - No
+#   steps:
+#     - intent: ask_certifications
+#     - action: utter_certifications
+#     - intent: deny
+#     - action: action_follow_up
 
 - story: Projects
   steps:

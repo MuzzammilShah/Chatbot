@@ -20,7 +20,6 @@ nlu:
 - intent: goodbye
   examples: |
     - cu
-    - good by
     - cee you later
     - good night
     - bye
@@ -29,6 +28,10 @@ nlu:
     - see you around
     - bye bye
     - see you later
+    - thank you
+    - thanks! good bye
+    - thank you, see you later!
+    - thanks! bye
 
 - intent: affirm
   examples: |
@@ -65,6 +68,9 @@ nlu:
     - so so perfect
     - so good
     - so perfect
+    - I am good
+    - im good
+    - good
 
 - intent: mood_unhappy
   examples: |
@@ -82,6 +88,10 @@ nlu:
     - extremly sad
     - so saad
     - so sad
+    - not bad
+    - not great
+    - not good
+    - bad
 
 - intent: bot_challenge
   examples: |
@@ -89,6 +99,17 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+    - are you trained?
+    - is this a chatbot?
+    - who are you?
+    - what are you
+    - what is this
+    - who is this?
+    - who is your creator?
+    - who created you?
+    - what are you made of?
+    - who made you?
+    - how were you developed?
 
 # - synonym: bot
 #   examples: |
