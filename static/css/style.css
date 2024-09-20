@@ -213,7 +213,10 @@ blockquote {
 } */
 
 .imgProfile {
-  box-shadow: 0 0px 1px 0 rgba(0, 0, 0, 0.16), 0 0px 10px 0 #00000096;
+  /* box-shadow: 0 0px 1px 0 rgba(0, 0, 0, 0.888), 0 10px 10px 0 #000000d6; */
+  box-shadow: 
+    0 0 10px 2px #4d6061,  /* Inner black glow */
+    0 0 30px 20px black;  /* Outer green glow */
   border-radius: 50px;
   width: 60%;
 }
@@ -547,10 +550,46 @@ video:focus {
 
 /* Bot pop-up intro */
 
-.tap-target {
+/* .tap-target {
   color: #ffffff;
   background: #4d6061;
+} */
+
+.new-tap-target {
+  /* background-color: #4d6061; */
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 300px;
+  position: fixed;
+  bottom: 80px; /* Position it above the widget */
+  right: 60px;
+  color: #ffffff;
+  opacity: 0; /* Initially hidden */
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0s linear 0.3s; /* Fade in */
 }
+
+.new-tap-target.show {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease;
+}
+
+/* .new-tap-target-content h5, .new-tap-target-content p {
+  margin: 0;
+  padding: 0;
+} */
+
+.new-tap-target-content h5{
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+.new-tap-target-content p{
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* PDF attachment css */
 
 .pdf_attachment {
   border: 0.5px solid #00000014;

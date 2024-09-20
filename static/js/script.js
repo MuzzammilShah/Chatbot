@@ -11,14 +11,26 @@ function include(file) {
 
 
 // Bot pop-up intro
+// document.addEventListener("DOMContentLoaded", () => {
+//   const elemsTap = document.querySelector(".tap-target");
+//   // eslint-disable-next-line no-undef
+//   const instancesTap = M.TapTarget.init(elemsTap, {});
+//   instancesTap.open();
+//   setTimeout(() => {
+//     instancesTap.close();
+//   }, 4000);
+// });
+// Bot pop-up intro
 document.addEventListener("DOMContentLoaded", () => {
-  const elemsTap = document.querySelector(".tap-target");
-  // eslint-disable-next-line no-undef
-  const instancesTap = M.TapTarget.init(elemsTap, {});
-  instancesTap.open();
+  const tapTarget = document.getElementById("bot-popup");
+
+  // Show the pop-up when the page loads
+  tapTarget.classList.add("show");
+
+  // Automatically close the pop-up after 4 seconds
   setTimeout(() => {
-    instancesTap.close();
-  }, 4000);
+    tapTarget.classList.remove("show");
+  }, 8000);
 });
 
 
